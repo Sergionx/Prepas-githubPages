@@ -1,0 +1,113 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 3rem 5rem;
+
+  .card {
+    background-color: rgb(246, 90, 246);
+    border-radius: 10px;
+    width: 25rem;
+  
+    border: 1px solid black;
+  
+    /* Padding interno al contenedor */
+    padding: 1rem;
+    /* Margen externo al contenedor */
+    margin-bottom: 1rem;
+    position: relative;
+  
+    .bg-image {
+      width: 100%;
+      border-radius: 6px;
+    }
+  
+    .ribbon {
+      position: absolute;
+      top: -30px;
+      left: -45px;
+  
+      width: 100px;
+      height: 75px;
+      /*z-index: 1;
+      overflow: hidden;
+      
+      text-align: right; */
+    }
+
+    .ribbon:hover {
+      animation: tilt-shaking 0.5s ease-in-out infinite;
+    }
+  }
+}
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+
+
+@media (max-width: 390px) {
+  .remove {
+    display: none;
+  }
+  
+}
+
+
+
+.card > main {
+  background-color: whitesmoke;
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 4rem;
+  margin: 0;
+}
+
+@media (max-width: 390px) {
+  .title {
+    font-size: 1.5rem;
+    color: blue
+  }
+}
+
+.description {
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.see-more {
+  margin-top: 0.5rem;
+  border-radius: 99px;
+
+  border: none;
+  background-color: rgb(229, 202, 230);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.see-more:hover {
+  background-color: rgb(227, 189, 228);
+  transform: scale(1.05) translateY(2px);
+}
+
+.see-more:active {
+  background-color: rgb(227, 189, 228);
+  transform: scale(0.95) translateY(2px);
+}
+
